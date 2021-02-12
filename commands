@@ -1,0 +1,164 @@
+sudo apt -y install git
+git clone https://git.openstack.org/openstack-dev/devstack
+cd devstack/
+ls
+nano local.conf
+ip a
+nano local.conf
+cd devstack
+./stack.sh
+sudo su -
+ls
+cd
+ls
+cd devstack/
+ls
+source stackrc 
+openstack image list
+cat stackrc 
+ls
+ip a
+curl http://10.0.1.4/dashboard
+source openrc
+wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+openstack image create     --container-format bare     --disk-format qcow2     --file cirros-0.4.0-x86_64-disk.img     Cirros-0.4.0-x86_64
+openstack image list
+ls
+cat openrc 
+qenv
+env
+free -m
+virsh list
+df -h
+lvscan
+sudo lvscan
+virsh list
+virsh edit 1
+vi /etc/cinder/cinder.conf 
+df -h
+cd /opt/stack/data/cinder
+ls
+cd volumes/
+ls
+cd
+ls
+curl -X POST https://localhost:5000/v2.0/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+cd keystone/
+ls
+cd ..
+ls
+cd devstack/
+ls
+env
+curl -X POST http://10.0.1.4/identity/v3.0/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+cd
+vi admirc
+source admirc 
+vi admirc
+source admirc 
+env
+curl http://10.0.1.4/identity
+curl -X POST http://10.0.1.4/identity/v3/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/ -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl http://10.0.1.4/identity/v3
+curl http://10.0.1.4/identity/v3/toekns
+curl http://10.0.1.4/identity/v3/tokens
+curl -X POST //10.0.1.4/identity/v3/token -d '{"auth":{"passwordCredentials":{"username": "joecool", "password":"coolword"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http//10.0.1.4/identity/v3/token -d '{"auth":{"passwordCredentials":{"username": "joecool", "password":"coolword"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/token -d '{"auth":{"passwordCredentials":{"username": "joecool", "password":"coolword"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/OS-OAUTH1/request_token -d '{"auth":{"passwordCredentials":{"username": "joecool", "password":"coolword"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '{"auth":{"passwordCredentials":{"username": "joecool", "password":"coolword"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+clear
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+env
+which openstack
+apt-get install openstack
+history 
+openstack list
+openstack 
+curl -XGET http://10.0.1.4/identity/v3/users/
+source admirc 
+curl -XGET http://10.0.1.4/identity/v3/users/
+curl -XGET http://10.0.1.4/identity/v3/users/  -d '{"auth":{"passwordCredentials":{"username": "admin", "password": "P@ssw0rd"}, "tenantId":"5"}}' -H 'Content-type: application/json'
+cd
+ls
+source adminr
+source adminrc\
+source adminrc
+l
+source admirc 
+openstack image list
+openstack tenant list
+openstack user list
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '"auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "admin","domain": {"name": "Default"},"password": "P@ssw0rd"}}}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '{"auth":{"password": {"user": {"name": "admin","domain": {"name": "Default"},"password": "P@ssw0rd"}}}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '"auth": {"identity": { "methods": [ "password"], "password": { "user": { "domain": { "id": "default" }, "name": "admin", "password": "P@ssw0rd"}}, "scope": {"project": {"domain": {"id": "default},"name": "admin"}}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '"auth": {"identity": { "methods": [ "password"], "password": { "user": { "domain": { "id": "default" }, "name": "admin", "password": "P@ssw0rd"}}, "scope": {"project": {"domain": {"id": "default"},"name": "admin"}}}' -H 'Content-type: application/json'
+curl -X POST http://10.0.1.4/identity/v3/auth/tokens -d '"auth": {"identity": { "methods": [ "password"], "password": { "user": { "domain": { "id": "default" }, "name": "admin", "password": "P@ssw0rd"}}, "scope": {"project": {"domain": {"id": "default"},"name": "admin"}}}' -H 'Content-type: application/json'ls
+ls
+mkdir apis
+cd apis/
+vi get_token.py
+python get_token.py 
+vi get_token.py
+python get_token.py 
+vi get_token.py
+python3.6 get_token.py 
+vi get_token.py
+python3.6 get_token.py 
+vi get_token.py
+python3.6 get_token.py 
+vi get_token.py
+python3.6 get_token.py 
+ls
+cat get_token.py 
+cd
+ls
+cd apis/
+ls
+cd ..
+ls
+cd
+ls
+cat admirc 
+ls
+cp admirc apis/
+cd apis/
+source admirc 
+env
+curl -v -s -X POST $OS_AUTH_URL/auth/tokens?nocatalog   -H "Content-Type: application/json"   -d '{ "auth": { "identity": { "methods": ["password"],"password": {"user": {"domain": {"name": "'"$OS_USER_DOMAIN_NAME"'"},"name": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"} } }, "scope": { "project": { "domain": { "name": "'"$OS_PROJECT_DOMAIN_NAME"'" }, "name":  "'"$OS_PROJECT_NAME"'" } } }}' | python -m json.tool
+vi admirc 
+source admirc 
+env
+curl -v -s -X POST $OS_AUTH_URL/auth/tokens?nocatalog   -H "Content-Type: application/json"   -d '{ "auth": { "identity": { "methods": ["password"],"password": {"user": {"domain": {"name": "'"$OS_USER_DOMAIN_NAME"'"},"name": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"} } }, "scope": { "project": { "domain": { "name": "'"$OS_PROJECT_DOMAIN_NAME"'" }, "name":  "'"$OS_PROJECT_NAME"'" } } }}' | python -m json.tool
+curl -v -s -X POST $OS_AUTH_URL/auth/tokens  -H "Content-Type: application/json"   -d '{ "auth": { "identity": { "methods": ["password"],"password": {"user": {"domain": {"name": "'"$OS_USER_DOMAIN_NAME"'"},"name": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"} } }, "scope": { "project": { "domain": { "name": "'"$OS_PROJECT_DOMAIN_NAME"'" }, "name":  "'"$OS_PROJECT_NAME"'" } } }}' | python -m json.tool
+cat get_token.py 
+vi admirc 
+curl -v -s -X POST $OS_AUTH_URL/auth/tokens  -H "Content-Type: application/json"   -d '{ "auth": { "identity": { "methods": ["password"],"password": {"user": {"domain": {"name": "'"$OS_USER_DOMAIN_NAME"'"},"name": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"} } }, "scope": { "project": { "domain": { "id": "default" }, "name":  "admin" } } }}' | python -m json.tool
+export OS_TOKEN=gAAAAABgJhFztDZyojX9F7T-FGE1jN2t20ySFFP70-5bCrj4mhrLruRiYM38QZy7CW3cxsIuOjPQvBE_3iVtT24wlfSXXSrLjBa6_Vtk50toic_Fva8ggKNUvQ4oDCO_KR-g03sWwpojPKFE0njy7PluXso2vYiMocCM7Vg1txYY-YnAGe0-LSU
+export OS_PROJECT_NAME=demo
+curl -s -H "X-Auth-Token: $OS_TOKEN"   $OS_COMPUTE_API/flavors   | python -m json.tool
+echo $OS_COMPUTE_API
+env
+cat admirc 
+source $OS_COMPUTE_API="http://10.0.1.4/compute/v2.1"
+$OS_COMPUTE_API="http://10.0.1.4/compute/v2.1"
+export $OS_COMPUTE_API="http://10.0.1.4/compute/v2.1"
+vi admirc 
+export OS_COMPUTE_API="http://10.0.1.4/compute/v2.1"
+curl -s -H "X-Auth-Token: $OS_TOKEN"   $OS_COMPUTE_API/flavors   | python -m json.tool
+vi admirc 
+curl -s -H "X-Auth-Token: $OS_TOKEN"   http://10.0.1.4:8774/v2/$OS_PROJECT_ID/servers   | python -m json.tool
+echo $OS_TOKEN
+echo $OS_PROJECT_ID
+source admirc 
+curl -s -H "X-Auth-Token: $OS_TOKEN"   http://10.0.1.4:8774/v2/$OS_PROJECT_ID/servers   | python -m json.tool
+
+cd
+cd apis/
+ls
+env
+history 
